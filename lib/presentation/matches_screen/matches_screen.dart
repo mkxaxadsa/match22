@@ -248,8 +248,8 @@ class _FootballMatchItemState extends State<FootballMatchItem> {
                       ),
                     ),
                     const SizedBox(width: 4),
-                    Image.network(
-                      widget.match.homeTeamLogo,
+                    Image.asset(
+                      'images/t1.png',
                       width: 32,
                       height: 32,
                       errorBuilder: (context, error, stackTrace) =>
@@ -277,8 +277,8 @@ class _FootballMatchItemState extends State<FootballMatchItem> {
                       ),
                     ),
                     const SizedBox(width: 4),
-                    Image.network(
-                      widget.match.awayTeamLogo,
+                    Image.asset(
+                      'images/t2.png',
                       width: 32,
                       height: 32,
                       errorBuilder: (context, error, stackTrace) =>

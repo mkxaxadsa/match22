@@ -67,8 +67,8 @@ class MatchDetailScreen extends StatelessWidget {
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Image.network(
-                                  match.homeTeamLogo,
+                                Image.asset(
+                                  'images/t1.png',
                                   width: 60,
                                 ),
                                 const SizedBox(height: 16),
@@ -92,8 +92,8 @@ class MatchDetailScreen extends StatelessWidget {
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Image.network(
-                                  match.awayTeamLogo,
+                                Image.asset(
+                                  'images/t2.png',
                                   width: 60,
                                 ),
                                 const SizedBox(height: 16),

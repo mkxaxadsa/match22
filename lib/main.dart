@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider.value(
       value: teamsMatchesController,
       child: MaterialApp.router(
-        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
         theme: MyTheme.theme,
         routerConfig: MyRouter.router,
       ),

@@ -89,7 +89,7 @@ class _CreateTeamScreenState extends State<CreateTeamScreen> {
                                 ? Icon(
                                     Icons.image_outlined,
                                     color: context.theme.primaryColor,
-                                    size: 32,
+                                    size: 13,
                                   )
                                 : Padding(
                                     padding: const EdgeInsets.all(16),

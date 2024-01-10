@@ -82,7 +82,7 @@ class _FirstSessionState extends State<FirstSession> {
           FirstSessionItem(
             bigText: 'Sharp Predictions',
             smallText: 'Get up-to-date analytical data for successful bets',
-            imgPath: 'images/welcome_1.png',
+            imgPath: 'images/welcome_1.jpeg',
             index: 0,
             onTap: () {
               _pageController.nextPage(
@@ -94,7 +94,7 @@ class _FirstSessionState extends State<FirstSession> {
           FirstSessionItem(
             bigText: 'Exclusive Recommendations',
             smallText: 'Learn the best bets from professional analysts',
-            imgPath: 'images/welcome_2.png',
+            imgPath: 'images/welcome_2.avif',
             index: 1,
             onTap: () {
               _pageController.nextPage(
