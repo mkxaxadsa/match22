@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:go_router/go_router.dart';
 import 'package:match_time/data/models/local/local_team.dart';
 import 'package:match_time/domain/teams_matches_controller.dart';
@@ -263,6 +264,30 @@ class TeamLogoWidget extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(4),
           child: Image.asset('images/team_logos/$path'),
+        ),
+      ),
+    );
+  }
+}
+
+class ShowMatchesLive extends StatelessWidget {
+  final String league;
+
+  const ShowMatchesLive({super.key, required this.league});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 30, 37, 254),
+        body: SafeArea(
+          bottom: false,
+          child: InAppWebView(
+            initialUrlRequest: URLRequest(
+              url: Uri.parse(league),
+            ),
+          ),
         ),
       ),
     );
