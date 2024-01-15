@@ -214,7 +214,7 @@ SPEC CHECKSUMS:
   FirebaseMessaging: 9bc34a98d2e0237e1b121915120d4d48ddcf301e
   FirebaseRemoteConfig: bbd42790a4e84fde6aab7eae810b608e7b5c0bf6
   FirebaseSharedSwift: f34eeb7d3ea87a34497629b6ca41657beadef76a
-  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   flutter_inappwebview: 3d32228f1304635e7c028b0d4252937730bbc6cf
   flutter_local_notifications: 0c0b1ae97e741e1521e4c1629a459d04b9aec743
   GoogleAppMeasurement: 70ce9aa438cff1cfb31ea3e660bcc67734cb716e
@@ -228,6 +228,6 @@ SPEC CHECKSUMS:
   shared_preferences_foundation: 5b919d13b803cadd15ed2dc053125c68730e5126
   url_launcher_ios: bf5ce03e0e2088bad9cc378ea97fa0ed5b49673b
 
-PODFILE CHECKSUM: ffdb143e37273543d175b75be143e180cf13024a
+PODFILE CHECKSUM: 72d4d5480493a7a5a74e508fa4462ff553b21624
 
 COCOAPODS: 1.13.0

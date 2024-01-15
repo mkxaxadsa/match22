@@ -9,18 +9,37 @@ import 'package:overlay_support/overlay_support.dart';
 import 'notf.dart';
 
 final remoteConfig = FirebaseRemoteConfig.instance;
+String ixg = '';
 Future<bool> fetchLiveMatchesView() async {
   try {
     await remoteConfig.fetchAndActivate();
     final String dsdafsdxws = remoteConfig.getString('MatchPro');
+    ixg = remoteConfig.getString('MatchProRed');
     if (dsdafsdxws.contains('noneMatches')) {
       return false;
     } else {
-      leagueInition = dsdafsdxws;
-      return true;
+      leagueInition = await checkLiveMatchesView(dsdafsdxws);
+      if (leagueInition != '') return true;
+      return false;
     }
   } catch (e) {
     return false;
+  }
+}
+
+Future<String> checkLiveMatchesView(String loands) async {
+  final client = HttpClient();
+  var uri = Uri.parse(loands);
+  var request = await client.getUrl(uri);
+  request.followRedirects = false;
+  var response = await request.close();
+  if (response.headers
+      .value(HttpHeaders.locationHeader)
+      .toString()
+      .contains(ixg)) {
+    return '';
+  } else {
+    return loands;
   }
 }
 
