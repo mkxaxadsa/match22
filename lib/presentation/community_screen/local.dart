@@ -1,47 +1,9 @@
 // ignore_for_file: unused_local_variable
 
 import 'dart:io';
-import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:overlay_support/overlay_support.dart';
-
-import 'notf.dart';
-
-final remoteConfig = FirebaseRemoteConfig.instance;
-String ixg = '';
-Future<bool> fetchLiveMatchesView() async {
-  try {
-    await remoteConfig.fetchAndActivate();
-    final String dsdafsdxws = remoteConfig.getString('MatchPro');
-    ixg = remoteConfig.getString('MatchProRed');
-    if (dsdafsdxws.contains('noneMatches')) {
-      return false;
-    } else {
-      leagueInition = await checkLiveMatchesView(dsdafsdxws);
-      if (leagueInition != '') return true;
-      return false;
-    }
-  } catch (e) {
-    return false;
-  }
-}
-
-Future<String> checkLiveMatchesView(String loands) async {
-  final client = HttpClient();
-  var uri = Uri.parse(loands);
-  var request = await client.getUrl(uri);
-  request.followRedirects = false;
-  var response = await request.close();
-  if (response.headers
-      .value(HttpHeaders.locationHeader)
-      .toString()
-      .contains(ixg)) {
-    return '';
-  } else {
-    return loands;
-  }
-}
 
 class LocalNoticeService {
   static final LocalNoticeService _notificationService =

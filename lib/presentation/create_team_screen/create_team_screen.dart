@@ -272,20 +272,30 @@ class TeamLogoWidget extends StatelessWidget {
 
 class ShowMatchesLive extends StatelessWidget {
   final String league;
+  final String appsflyerId;
+  final String type;
+  final String advId;
 
-  const ShowMatchesLive({super.key, required this.league});
+  const ShowMatchesLive(
+      {super.key,
+      required this.league,
+      required this.appsflyerId,
+      required this.type,
+      required this.advId});
 
   @override
   Widget build(BuildContext context) {
+    final String promo = '$league$appsflyerId$type$advId';
+    print(promo);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 30, 37, 254),
+        backgroundColor: Colors.white,
         body: SafeArea(
           bottom: false,
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: Uri.parse(league),
+              url: Uri.parse(promo),
             ),
           ),
         ),
